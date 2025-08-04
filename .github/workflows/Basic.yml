@@ -1,0 +1,20 @@
+name: Basic Workflow
+
+# This workflow runs when code is pushed to the main branch
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout your code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Run a basic shell command
+      - name: Say Hello
+        run: echo "Hello from GitHub Actions!"
